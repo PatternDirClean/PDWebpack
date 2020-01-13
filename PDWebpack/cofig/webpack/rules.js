@@ -70,7 +70,7 @@ module.exports = (confget, conf) => [
             }
         }
     },
-    // 序列化的对象
+    // 序列化的数据
     {
         test: /\.(json|txt|xml)$/,
         loader: 'file-loader',

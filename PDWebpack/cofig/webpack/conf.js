@@ -11,7 +11,7 @@ global.WebpackConf = () => {
             /** url 替换 */
             publicPath: confget.GlobalUrlOf()
         },
-        /** 忽略打包 */
+        /** 脱离的第三方库 */
         externals: require('./externals')(confget, Conf),
         resolve: require('./resolve')(confget, Conf),
         module: {
