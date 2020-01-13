@@ -4,7 +4,7 @@
   "description": "",
   "private": true,
   "scripts": {
-    "start": "webpack-dev-server --hot -w --config webpack.dev.js",
+    "debug": "webpack-dev-server --hot -w --config webpack.dev.js",
     "bulic": "webpack -p --config webpack.prod.js"
   },
   "author": "fybug",
