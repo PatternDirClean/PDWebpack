@@ -1,3 +1,4 @@
+/** 框架配置 */
 global.Conf = {
     /** 加载模块加载顺序 */
     configload: ['ModeLoad', 'PageLoad'],

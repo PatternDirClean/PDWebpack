@@ -1,5 +1,6 @@
 /** 项目根目录 */
 global.Root = path.resolve(__dirname, '../../') + '/';
+
 /** 全局输出路径 */
 global.OutPath = Root + 'build/';
 /** 页面输出路径 */
