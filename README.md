@@ -8,17 +8,17 @@
 ## 目录结构：
 <pre>
 ┃
-┣ build // 编译文件夹
+┣ build // 打包后文件的存放文件夹
 ┃
-┣ PDWebpack // 框架目录
+┣ PDWebpack // 框架运行目录
 ┃ ┃
-┃ ┣ config // 配置相关
+┃ ┣ config // 框架配置相关
 ┃ ┃ ┃
 ┃ ┃ ┗ webpack // webpack 配置相关
 ┃ ┃
-┃ ┣ lib    // 框架运行相关的文件
-┃ ┣ load   // 加载相关
-┃ ┗ run.js // 用户使用框架的代码文件
+┃ ┣ lib    // 框架运行相关的依赖
+┃ ┣ load   // 框架加载相关
+┃ ┗ run.js // 用户代码，在此处使用框架
 ┃
 ┣ test // 示例项目
 ┃
