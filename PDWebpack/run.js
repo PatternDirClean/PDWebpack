@@ -4,6 +4,6 @@ confload.runOf('ModeLoad', /** @param {global#ModeLoad} modeload */(modeload) =>
     modeload.addMode('main', JsPath + 'main.js', "defer");
     return 'PageLoad';
 }).then((pageLoad) => {
-    pageLoad.addPage(SourcePath + 'index.html', 'index', ['index']);
-    pageLoad.addPage(SourcePath + 'main.html', 'main', ['main']);
+    pageLoad.addPage('index', SourcePath + 'index.html', ['index']);
+    pageLoad.addPage('main', SourcePath + 'main.html', ['main']);
 });

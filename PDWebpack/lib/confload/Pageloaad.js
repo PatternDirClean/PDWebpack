@@ -27,15 +27,15 @@ global.PageLoad = class PageLoad {
 
     /** 增加一个页面
      *
-     * @param {string} pagePath 页面模版路径
      * @param {string} outName 输出的页面的名称
+     * @param {string} pagePath 页面模版路径
      * @param {array} chunk 该页面的私有模块
      * @param extent 拓展属性
      * @param {PageLoad.defaultOptions} options 拓展配置
      *
      * @return this
      */
-    addPage(pagePath, outName, chunk = [], extent = {}, options = {}) {
+    addPage(outName, pagePath, chunk = [], extent = {}, options = {}) {
         // 初始化配置
         options = Object.assign({}, this.defaultOptions, options);
 
