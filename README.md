@@ -18,9 +18,9 @@
 ┃ ┃
 ┃ ┣ lib    // 框架运行相关的文件
 ┃ ┣ load   // 加载相关
-┃ ┗ run.js // 用户运行配置模块的部分
+┃ ┗ run.js // 用户使用框架的代码文件
 ┃
-┣ test // 示例
+┣ test // 示例项目
 ┃
 ┣ package.json
 ┣ package-lock.json
@@ -30,14 +30,7 @@
 ┗ webpack.prod.js     // webpack 生产配置
 </pre>
 
-## /PDWebpack/ 文件夹
-
-框架所在文件夹，该文件夹下含有
-- 配置相关的文件
-- 加载相关的文件
-- run.js 用户运行该框架的代码文件
-
-> 更多请查看 wiki
+> 框架使用方法请查看 wiki
 
 # 使用
 直接解压作为项目文件夹然后按照下列提示即可
