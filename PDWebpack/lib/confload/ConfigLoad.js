@@ -25,6 +25,7 @@
  *
  * @author fybug
  * @version 0.0.1
+ * @since PDWebpack 0.0.1
  */
 global.ConfigLoad = class ConfigLoad {
     /** 全局加载模块映射 */

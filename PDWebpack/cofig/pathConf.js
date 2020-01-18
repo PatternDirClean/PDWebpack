@@ -1,13 +1,19 @@
-/** 项目根目录 */
-global.Root = path.resolve(__dirname, '../../') + '/';
+/** 项目根目录
+ * @author fybug
+ * @since PDWebpack 0.0.1
+ */
+global.RootPath = path.resolve(__dirname, '../../') + '/';
+/** 全局输出路径
+ * @author fybug
+ * @since PDWebpack 0.0.1
+ */
+global.OutPath = RootPath + 'build/';
 
-/** 全局输出路径 */
-global.OutPath = Root + 'build/';
 /** 页面输出路径 */
 global.PageOutPath = OutPath;
 
 /** 源码根目录 */
-global.SourcePath = Root + 'test/';
+global.SourcePath = RootPath + 'test/';
 /** 全局静态资源路径 */
 global.StaticPath = SourcePath + 'static/';
 /** 网页图标路径 */

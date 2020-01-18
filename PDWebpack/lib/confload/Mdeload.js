@@ -1,3 +1,11 @@
+/** js 文件处理模块
+ *
+ * 使用该模块定义需要加入那些 js 文件并指定加载模式
+ *
+ * @author fybug
+ * @version 0.0.1
+ * @since PDWebpack 0.0.1
+ */
 global.ModeLoad = class ModeLoad {
     /** 模块加载模式 */
     loadMode = {};

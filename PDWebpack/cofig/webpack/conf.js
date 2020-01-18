@@ -1,4 +1,14 @@
+/** webpack 基础配置模版
+ *
+ * 该配置作为后续处理时的基础对象进行
+ * 后续处理时在此对象上追加或修改配置内容
+ *
+ * @author fybug
+ * @version 0.0.1
+ * @since PDWebpack 0.0.1
+ */
 global.WebpackConf = () => {
+    // 实例化框架配置读取工具
     let confget = new ConfToWebpack(Conf);
 
     return {

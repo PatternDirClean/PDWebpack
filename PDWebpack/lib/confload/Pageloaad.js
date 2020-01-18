@@ -1,3 +1,11 @@
+/** 页面处理模块
+ *
+ * 使用该模块定义加载的 html 文件以及对改页面进行配置
+ *
+ * @author fybug
+ * @version 0.0.1
+ * @since PDWebpack 0.0.1
+ */
 global.PageLoad = class PageLoad {
     /** 加载的默认配置 */
     defaultOptions = {
