@@ -1,67 +1,49 @@
-/** js 文件处理模块
- *
- * 使用该模块定义需要加入那些 js 文件并指定加载模式
- *
- * @author fybug
- * @version 0.0.1
- * @since PDWebpack 0.0.1
- */
-global.ModeLoad = class ModeLoad {
+global.AnonymousLoad = class AnonymousLoad {
     /** 模块加载模式 */
     loadMode = {};
     /** 模块路径映射 */
     entry = {};
+    /** 当前名称 */
+    nowName = 0;
     /** 公共模块 */
     publicentry = [];
     /** 固定导入的模块 */
     providePlugin = {};
 
+    __AssignedName() {
+        return '' + this.nowName++;
+    }
+
+    __plushMode(name, path, mode) {
+        this.entry[name] = path;
+        this.loadMode[name] = mode;
+    }
+
     /** 添加模块
      *
-     * @param {string} name 模块名称 | 模块路径
      * @param {string} paths 模块路径
      * @param {'sync'|'defer'|'async'} mode 加载模式 {@see #setModeLoads}
      *
      * @return this
      */
-    addMode(name, paths = '', mode = 'sync') {
-        if (paths === '') {
-            paths = name;
-            name = path.parse(paths).name;
-        }
-
-        this.entry[name] = paths;
-        this.setModeLoads(name, mode);
-
+    addMode(paths = '', mode = 'sync') {
+        this.__plushMode(this.__AssignedName(), paths, mode);
         return this;
     };
 
     /** 加入公共模块
-     * @param {string} name 模块名称
+     *
      * @param {string} paths 模块路径
      * @param {'sync'|'defer'|'async'} mode 加载模式 {@see #setModeLoads}
      *
      * @return this
      */
-    publicMode(name, paths = '', mode = 'sync') {
-        if (paths === '') {
-            paths = name;
-            name = path.parse(paths).name;
-        }
+    publicMode(paths = '', mode = 'sync') {
+        let name = this.__AssignedName();
+
         this.publicentry.push(name);
+        this.__plushMode(name, paths, mode);
 
-        return this.addMode(name, paths, mode);
-    };
-
-    /** 设置模块的加载模式
-     *
-     * @param {string} name 模块名称
-     * @param {'sync'|'defer'|'async'} mode 加载模式: 同步，延迟，异步
-     *
-     * @return this
-     */
-    setModeLoads(name, mode = 'sync') {
-        this.loadMode[name] = mode;
         return this;
     };
 
@@ -82,6 +64,7 @@ global.ModeLoad = class ModeLoad {
      */
     __loadToConfig(config) {
         config.ModeLoad = this;
+        config.AnonymousLoad = this;
         return config;
     };
 

@@ -8,12 +8,12 @@
  */
 global.ConfToWebpack = class ConfToWebpack {
     /** 框架配置对象
-     * @type {CONF}
+     * @type {Conf}
      */
     CONF;
 
     /** 初始化时需加入当前使用的框架配置对象
-     * @param {CONF} conf 当前框架配置
+     * @param {Conf} conf 当前框架配置
      */
     constructor(conf) {
         this.CONF = conf;
@@ -28,7 +28,7 @@ global.ConfToWebpack = class ConfToWebpack {
      * @return {string} 当前使用的配置项
      */
     GetOutName(name, defa) {
-        return this.CONF[name + 'Out'].outName || defa
+        return this.__g(name + 'Out', 'outName') || defa;
     }
 
     /** 获取全局替换 url
@@ -37,8 +37,7 @@ global.ConfToWebpack = class ConfToWebpack {
      * @return {string} 配置数据
      */
     GlobalUrlOf(defa = '') {
-        let out = this.CONF.Out.urlOf;
-        return out !== undefined ? out : defa;
+        return this.__g('Out', 'urlOf') || defa;
     }
 
     /** 获取对应配置的替换 url
@@ -48,10 +47,16 @@ global.ConfToWebpack = class ConfToWebpack {
      * @return {string} 当前使用的配置项
      */
     GetUrlOf(name, defa = './') {
-        let out = this.CONF[name + 'Out'].urlOf;
-        if (out !== undefined) return out;
-
-        out = this.CONF.Out.urlOf;
-        return (out !== undefined) ? out : defa;
+        return this.__g(name + 'Out', 'urlOf')
+            || this.__g('Out', 'urlOf') || defa;
     };
+
+    __g(name, key) {
+        let out = this.CONF[name];
+
+        if (out && out[key])
+            return out[key];
+
+        return false;
+    }
 };

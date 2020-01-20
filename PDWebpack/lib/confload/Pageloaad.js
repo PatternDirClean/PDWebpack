@@ -7,7 +7,7 @@
  * @since PDWebpack 0.0.1
  */
 global.PageLoad = class PageLoad {
-    /** 加载的默认配置 */
+    /** 默认的加载配置 */
     defaultOptions = {
         /** 输出的文件后缀 */
         outsuffix: ".html",
@@ -15,7 +15,7 @@ global.PageLoad = class PageLoad {
         favicon: IconPath,
         /** js 标签插入位置 */
         inject: 'head',
-        /** 是否导入全局配置 */
+        /** 是否导入全局模块 */
         pubchuncks: true
     };
     /** 配置队列 */
@@ -26,7 +26,7 @@ global.PageLoad = class PageLoad {
      * @return 配置模版
      */
     __getTmp(minify = true) {
-        let tmp = Object.assign({}, htmlConfTmp);
+        let tmp = Object.assign({}, WebPackPlugins.HtmlWebpackPlugin());
         // 去除压缩
         minify || delete tmp.minify;
 
@@ -39,7 +39,7 @@ global.PageLoad = class PageLoad {
      * @param {string} pagePath 页面模版路径
      * @param {array} chunk 该页面的私有模块
      * @param extent 拓展属性
-     * @param {PageLoad.defaultOptions} options 拓展配置
+     * @param {PageLoad.defaultOptions} options 加载配置
      *
      * @return this
      */

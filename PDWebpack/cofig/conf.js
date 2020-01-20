@@ -4,7 +4,7 @@
  */
 global.Conf = {
     /** 加载模块加载顺序 */
-    configload: ['ModeLoad', 'PageLoad'],
+    configload: [/*'ModeLoad'*/'AnonymousLoad', 'PageLoad'],
 
     // // 全局输出配置
     // Out: {
@@ -13,7 +13,7 @@ global.Conf = {
     // },
     // // 模块输出配置
     // jsOut: {
-    //     outName: '[id][name][hash:12].js'
+    //     outName: '[hash:12][name][id].js'
     // },
     // // css 输出配置
     // cssOut: {
