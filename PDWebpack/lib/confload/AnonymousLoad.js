@@ -1,3 +1,14 @@
+/** 匿名 js 处理模块
+ *
+ * 与 {@link ModeLoad} 一致，区别在于 {@link publicMode} 和 {@link addMode} 方法第一个参数被移除
+ * 名称使用随机数代替
+ *
+ * 不可与 {@link ModeLoad} 同时使用
+ *
+ * @author fybug
+ * @version 0.0.1
+ * @since PDWebpack 0.0.1
+ */
 global.AnonymousLoad = class AnonymousLoad {
     /** 模块加载模式 */
     loadMode = {};
@@ -10,8 +21,12 @@ global.AnonymousLoad = class AnonymousLoad {
     /** 固定导入的模块 */
     providePlugin = {};
 
+    /** 分配随机名称 */
     __AssignedName() {
-        return '' + this.nowName++;
+        let array = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+        let n = Math.round(Math.random() * (array.length - 1));
+
+        return array[n] + this.nowName++ + (Math.round(Math.random() * 9));
     }
 
     __plushMode(name, path, mode) {

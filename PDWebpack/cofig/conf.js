@@ -4,7 +4,7 @@
  */
 global.Conf = {
     /** 加载模块加载顺序 */
-    configload: [/*'ModeLoad'*/'AnonymousLoad', 'PageLoad'],
+    configload: ['ModeLoad', 'PageLoad'],
 
     // // 全局输出配置
     // Out: {
