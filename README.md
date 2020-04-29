@@ -5,6 +5,8 @@
 
 基于 **webpack** 开发的框架，核心目的是为了增加 **webpack** 配置的可读性，方便后续的手脚架开发
 
+每一种类型的配置都会单独存放
+
 ## 目录结构：
 <pre>
 ┃
@@ -30,11 +32,13 @@
 ┗ webpack.prod.js     // webpack 生产配置
 </pre>
 
-> 框架使用方法请查看 wiki
+可通过 **WIKI** 学习原理和使用
 
-# 使用
-直接解压作为项目文件夹然后按照下列提示即可
-> 配置完成后可以使用 package.json 中声明的 debug / bulic 命令运行 webpack
+## 使用方法
+下载或 clone 本项目，直接解压作为项目文件夹然后按照下列提示即可
+
+**建议克隆 releases 分支，或者去发行版下载<br/>
+配置完成后可以使用 package.json 中声明的 debug / bulic 命令运行 webpack**
 
 需要先安装 **Node.js** ，自行百度
 
@@ -49,7 +53,9 @@ npm install webpack webpack-cli webpack-dev-server -g
 ```
 npm install --save-dev
 ```
-## 安装 **postcss**
+
+## 额外
+###安装 **postcss**
 ```
 npm install postcss-cli -g
 ```
@@ -62,11 +68,11 @@ postcss-nested
 ```
 > 不使用可以无视 
 
-# 参与
-一个人的力量是有限的，一个项目终究需要大家一起完善
+## 分支说明
+**dev-master**：当前的开发分支，不建议 clone 本分支
 
-· fork 本仓库
+**releases**：当前发布分支，稳定版的源码
 
-· 新建 add_*** 分支 
-
-· 提交等待合并
+## 提供bug反馈或建议
+- [码云Gitee](https://gitee.com/PatternDirClean/PDWebpack)
+- [Github](https://github.com/PatternDirClean/PDWebpack)

@@ -1,6 +1,6 @@
 /** 框架配置转 webpack 配置工具
  *
- * 快捷读取 webpack 配置项对应的框架配置
+ * 读取对应的框架配置的配置项
  *
  * @author fybug
  * @version 0.0.1

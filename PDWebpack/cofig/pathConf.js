@@ -1,3 +1,5 @@
+/* 路径常量 */
+
 /** 项目根目录
  * @author fybug
  * @since PDWebpack 0.0.1

@@ -2,6 +2,7 @@
  *
  * 使用该模块可以快速加入需要的 webpack 配置
  *
+ * ```javascript 1.6
  * 示例
  * {
  *      // 传入基础 webpack 配置
@@ -22,6 +23,7 @@
  *      // 填充到 webpack 的配置中
  *      .__toConf();
  *  }
+ *  ```
  *
  * @author fybug
  * @version 0.0.1
@@ -79,7 +81,7 @@ global.ConfigLoad = class ConfigLoad {
     };
 
     /** 填充生成的配置到基础配置对象中
-     * @return 生成的配置对象
+     * @return 生成的 webpack 配置对象
      */
     __toConf() {
         this.configModeQuery.forEach((v) => {

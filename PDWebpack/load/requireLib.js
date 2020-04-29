@@ -1,3 +1,5 @@
+/* 导入外置依赖库 */
+
 global.merge = require('webpack-merge'); // 合并对象
 global.webpack = require('webpack'); // 核心
 global.CleanWebpackPlugin = require('clean-webpack-plugin'); // 清除缓存
