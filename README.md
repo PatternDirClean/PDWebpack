@@ -69,9 +69,9 @@ postcss-nested
 > 不使用可以无视 
 
 ## 分支说明
-**dev-master**：当前的开发分支，不建议 clone 本分支
+**dev**：当前的开发分支，不建议 clone 本分支
 
-**releases**：当前发布分支，稳定版的源码
+**master**：当前主分支，稳定版的源码
 
 ## 提供bug反馈或建议
 - [码云Gitee](https://gitee.com/PatternDirClean/PDWebpack)
