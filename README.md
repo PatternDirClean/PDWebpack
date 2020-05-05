@@ -55,7 +55,7 @@ npm install --save-dev
 ```
 
 ## 额外
-###安装 **postcss**
+### 安装 **postcss**
 ```
 npm install postcss-cli -g
 ```
