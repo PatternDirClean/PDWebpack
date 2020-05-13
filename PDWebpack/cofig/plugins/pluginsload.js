@@ -6,8 +6,19 @@
  * @author fybug
  * @version 0.0.1
  * @since PDWebpack 0.0.1
+ * @class WebPackPlugins
  */
-global.WebPackPlugins = {};
-
-require('./ScriptExtHtmlWebpackPlugin');
-require('./HtmlWebpackPlugin');
+global.WebPackPlugins = {
+    /** HtmlWebpackPlugin 基础基础
+     *
+     * @class HtmlWebpackPlugin
+     * @constructs
+     */
+    HtmlWebpackPlugin: require('./HtmlWebpackPlugin'),
+    /** ScriptExtHtmlWebpackPlugin 基础配置对象
+     *
+     * @class ScriptExtHtmlWebpackPlugin
+     * @constructs
+     */
+    ScriptExtHtmlWebpackPlugin: require('./ScriptExtHtmlWebpackPlugin')
+};

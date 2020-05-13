@@ -6,8 +6,16 @@
  * @version 0.0.1
  * @since PDWebpack 0.0.1
  */
-global.PageLoad = class PageLoad {
-    /** 默认的加载配置 */
+class PageLoad {
+    /** 默认的加载配置
+     *
+     * @type {{
+     *     outsuffix:string,
+     *     favicon:string,
+     *     inject:'head'|'body',
+     *     pubchuncks:boolean
+     * }}
+     */
     defaultOptions = {
         /** 输出的文件后缀 */
         outsuffix: ".html",
@@ -18,12 +26,17 @@ global.PageLoad = class PageLoad {
         /** 是否导入全局模块 */
         pubchuncks: true
     };
-    /** 配置队列 */
+    /** 配置队列
+     *
+     * @type {WebPackPlugins.HtmlWebpackPlugin[]}
+     */
     htmlQuery = [];
 
     /** 获取配置模版
+     *
      * @param {boolean} minify 是否开启压缩
-     * @return 配置模版
+     *
+     * @return {WebPackPlugins.HtmlWebpackPlugin} 配置模版
      */
     __getTmp(minify = true) {
         let tmp = Object.assign({}, WebPackPlugins.HtmlWebpackPlugin());
@@ -37,8 +50,8 @@ global.PageLoad = class PageLoad {
      *
      * @param {string} outName 输出的页面的名称
      * @param {string} pagePath 页面模版路径
-     * @param {array} chunk 该页面的私有模块
-     * @param extent 拓展属性
+     * @param {string[]} chunk 该页面的私有模块
+     * @param {Object} extent 拓展属性
      * @param {PageLoad.defaultOptions} options 加载配置
      *
      * @return this
@@ -68,17 +81,21 @@ global.PageLoad = class PageLoad {
     }
 
     /** 加载到配置处理对象中
-     * @param config 配置处理对象
-     * @return 配置处理对象
+     *
+     * @param {ConfigLoad.configConllcation} config 配置处理对象
+     *
+     * @return {ConfigLoad.configConllcation} 配置处理对象
      */
     __loadToConfig(config) {
-        config.PageLoad = this;
+        config["PageLoad"] = this;
         return config;
     }
 
     /** 转化到配置中
-     * @param config 配置对象
-     * @return 配置对象
+     *
+     * @param {ConfigLoad.configConllcation} config 配置对象
+     *
+     * @return {ConfigLoad.configConllcation} 配置对象
      */
     __toConfig(config) {
         let conf = config.main;
@@ -100,4 +117,7 @@ global.PageLoad = class PageLoad {
         config.main = conf;
         return config;
     }
-};
+}
+
+/** @type PageLoad */
+global.PageLoad = PageLoad;

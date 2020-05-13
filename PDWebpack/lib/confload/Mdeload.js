@@ -5,15 +5,34 @@
  * @author fybug
  * @version 0.0.1
  * @since PDWebpack 0.0.1
+ * @class ModeLoad
  */
-global.ModeLoad = class ModeLoad {
-    /** 模块加载模式 */
+class ModeLoad {
+    /** 模块加载模式
+     *
+     * @type {{
+     *     "modename":'sync'|'defer'|'async'
+     * }}
+     */
     loadMode = {};
-    /** 模块路径映射 */
+    /** 模块路径映射
+     *
+     * @type {{
+     *     "modename":string
+     * }}
+     */
     entry = {};
-    /** 公共模块 */
+    /** 公共模块
+     *
+     * @type string[]
+     */
     publicentry = [];
-    /** 固定导入的模块 */
+    /** 固定导入的模块
+     *
+     * @type {{
+     *     "modename":string
+     * }}
+     */
     providePlugin = {};
 
     /** 添加模块
@@ -37,6 +56,7 @@ global.ModeLoad = class ModeLoad {
     };
 
     /** 加入公共模块
+     *
      * @param {string} name 模块名称
      * @param {string} paths 模块路径
      * @param {'sync'|'defer'|'async'} mode 加载模式 {@see #setModeLoads}
@@ -66,6 +86,7 @@ global.ModeLoad = class ModeLoad {
     };
 
     /** 导入固定模块
+     *
      * @param {string} modename 导入后的全局变量名称
      * @param {string} paths 模块路径
      *
@@ -77,17 +98,21 @@ global.ModeLoad = class ModeLoad {
     };
 
     /** 加载到配置处理对象中
-     * @param config 配置处理对象
-     * @return 配置处理对象
+     *
+     * @param {ConfigLoad.configConllcation} config 配置处理对象
+     *
+     * @return {ConfigLoad.configConllcation} 配置处理对象
      */
     __loadToConfig(config) {
-        config.ModeLoad = this;
+        config["ModeLoad"] = this;
         return config;
     };
 
     /** 转化到配置中
-     * @param config 配置处理对象
-     * @return 配置处理对象
+     *
+     * @param {ConfigLoad.configConllcation} config 配置处理对象
+     *
+     * @return {ConfigLoad.configConllcation} 配置处理对象
      */
     __toConfig(config) {
         let conf = config.main;
@@ -108,4 +133,7 @@ global.ModeLoad = class ModeLoad {
         config.main = conf;
         return config;
     }
-};
+}
+
+/** @type ModeLoad */
+global.ModeLoad = ModeLoad;

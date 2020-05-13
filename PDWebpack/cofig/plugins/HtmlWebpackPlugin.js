@@ -1,10 +1,11 @@
-/** HtmlWebpackPlugin 基础基础
- *
+/**
  * @author fybug
  * @version 0.0.1
  * @since PDWebpack 0.0.1
+ *
+ * @return {{meta:Object,cache:boolean,minify:Object}}
  */
-WebPackPlugins.HtmlWebpackPlugin = () => {
+module.exports = () => {
     return {
         meta: {
             "viewport": "width=device-width, initial-scale=1, shrink-to-fit=n",

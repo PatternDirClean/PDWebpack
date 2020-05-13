@@ -5,14 +5,18 @@
  * @author fybug
  * @version 0.0.1
  * @since PDWebpack 0.0.1
+ *
+ * @class ConfToWebpack
  */
-global.ConfToWebpack = class ConfToWebpack {
+class ConfToWebpack {
     /** 框架配置对象
+     *
      * @type {Conf}
      */
     CONF;
 
     /** 初始化时需加入当前使用的框架配置对象
+     *
      * @param {Conf} conf 当前框架配置
      */
     constructor(conf) {
@@ -25,6 +29,7 @@ global.ConfToWebpack = class ConfToWebpack {
      *
      * @param {string} name 获取的类型
      * @param {string} defa 默认值
+     *
      * @return {string} 当前使用的配置项
      */
     GetOutName(name, defa) {
@@ -34,6 +39,7 @@ global.ConfToWebpack = class ConfToWebpack {
     /** 获取全局替换 url
      *
      * @param {string} defa 默认配置项
+     *
      * @return {string} 配置数据
      */
     GlobalUrlOf(defa = '') {
@@ -44,6 +50,7 @@ global.ConfToWebpack = class ConfToWebpack {
      *
      * @param {string} name 获取的类型
      * @param {string} defa 默认值
+     *
      * @return {string} 当前使用的配置项
      */
     GetUrlOf(name, defa = './') {
@@ -59,4 +66,7 @@ global.ConfToWebpack = class ConfToWebpack {
 
         return false;
     }
-};
+}
+
+/** @type ConfToWebpack */
+global.ConfToWebpack = ConfToWebpack;

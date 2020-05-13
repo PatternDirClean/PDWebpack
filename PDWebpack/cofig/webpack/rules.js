@@ -1,4 +1,7 @@
-/** 文件加载规则 */
+/** 文件加载规则
+ *
+ * @return {{}[]}
+ */
 module.exports = (confget, conf) => [
     // css 和 postcss 的加载处理
     {

@@ -1,11 +1,13 @@
 /* 路径常量 */
 
 /** 项目根目录
+ *
  * @author fybug
  * @since PDWebpack 0.0.1
  */
 global.RootPath = path.resolve(__dirname, '../../') + '/';
 /** 全局输出路径
+ *
  * @author fybug
  * @since PDWebpack 0.0.1
  */

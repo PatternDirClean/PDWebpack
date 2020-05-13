@@ -1,4 +1,7 @@
-/** 加载的插件 */
+/** 加载的插件
+ *
+ * @return {Object[]}
+ */
 module.exports = (confget, conf) => [
     // 清理输出
     new CleanWebpackPlugin({dry: false, protectWebpackAssets: true}),

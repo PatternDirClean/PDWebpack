@@ -6,6 +6,19 @@
  * @author fybug
  * @version 0.0.1
  * @since PDWebpack 0.0.1
+ *
+ * @return {{
+ *     output:{
+ *         filename:string,
+ *         path:string,
+ *         publicPath:string
+ *     },
+ *     externals:Object,
+ *     resolve:{extensions:string[]}
+ *     module:{rules:{}},
+ *     plugins:Object[],
+ *     performance:{hints:boolean}
+ * }}
  */
 global.WebpackConf = () => {
     // 实例化框架配置读取工具
