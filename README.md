@@ -5,7 +5,34 @@
 
 基于 **webpack** 开发的框架，核心目的是为了增加 **webpack** 配置的可读性，方便后续的手脚架开发
 
-每一种类型的配置都会单独存放
+## 拆解配置文件
+
+将原本写在 webpack.config.js 中的配置按配置项拆解成单个文件。提倡使用 ide 的文件搜索功能查找对应的配置项。
+
+## 简易加载
+
+在 `run.js` 中使用框架的加载对象 `confload` 载入并配置模块和页面，并将其联系起来
+
+```javascript
+confload.runOf('ModeLoad', /** @param {ModeLoad} modeload */(modeload) => {
+    // 加载为公共模块
+    modeload.publicMode('app', JsPath + 'app.js', "defer");
+    // 加载为私有模块，设置加载方式为 defer 延迟加载
+    modeload.addMode('index', JsPath + 'index.js', "defer");
+    modeload.addMode('main', JsPath + 'main.js', "defer");
+    return 'PageLoad';
+}).then((pageLoad) => {
+    // 加载 index.html 页面，载入 index 私有模块
+    pageLoad.addPage('index', SourcePath + 'index.html', ['index']);
+    pageLoad.addPage('main', SourcePath + 'main.html', ['main']);
+});
+```
+
+## 单独配置
+
+在 `conf.js` 中配置使用的加载模块以及文件编译输出的配置。每个文件对应的输出方式已被单独分离到该文件中。
+
+并在该文件中指定 devtool 专用配置。
 
 ## 目录结构：
 <pre>
@@ -20,6 +47,7 @@
 ┃ ┃
 ┃ ┣ lib    // 框架运行相关的依赖
 ┃ ┣ load   // 框架加载相关
+┃ ┃
 ┃ ┗ run.js // 用户代码，在此处使用框架
 ┃
 ┣ test // 示例项目
