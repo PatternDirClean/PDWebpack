@@ -1,6 +1,6 @@
 # PDWebpack
 ![](https://img.shields.io/badge/version-0.0.1-00b58a.svg "当前版本")
-![](https://img.shields.io/badge/webpack-4.41.5+-2e93ff.svg "开发所使用等等 webpack 版本")
+![](https://img.shields.io/badge/webpack-4.44.2+-2e93ff.svg "开发所使用等等 webpack 版本")
 ![](https://img.shields.io/badge/license-Apache%202.0-f27122.svg "使用的开源协议")
 
 基于 **webpack** 开发的框架，核心目的是为了增加 **webpack** 配置的可读性，方便后续的手脚架开发
@@ -72,20 +72,16 @@ confload.runOf('ModeLoad', /** @param {ModeLoad} modeload */(modeload) => {
 
 在项目文件夹中运行 `npm -y init` 初始化
 
-## 安装 **webpack**
-```
-npm install webpack webpack-cli webpack-dev-server -g
-```
-
 ## 安装项目依赖
 ```
 npm install --save-dev
 ```
+> 包含了 **webpack** 和 **webpack-dev-server**
 
 ## 额外
 ### 安装 **postcss**
 ```
-npm install postcss-cli -g
+npm install postcss-loader -D
 ```
 ### 使用的 **postcss** 模块
 ```
