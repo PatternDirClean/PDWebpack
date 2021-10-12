@@ -3,7 +3,7 @@
 
 # PDWebpack
 ![](https://img.shields.io/badge/version-0.0.1-00b58a.svg "当前版本")
-![](https://img.shields.io/badge/webpack-4.44.2+-2e93ff.svg "开发所使用等等 webpack 版本")
+![](https://img.shields.io/badge/webpack-4.44.2-2e93ff.svg "开发所使用等等 webpack 版本")
 ![](https://img.shields.io/badge/license-Apache%202.0-f27122.svg "使用的开源协议")
 
 基于 **webpack** 开发的框架，核心目的是为了增加 **webpack** 配置的可读性，并为后续的手脚架开发提供便捷的配置生成工具。
