@@ -1,8 +1,8 @@
 // 配置加载模块
-require('./ConfigLoad');
+require("./ConfigLoad");
 // js 加载模块
-require('./Mdeload');
+require("./Mdeload");
 // js 匿名加载模块
-require('./AnonymousLoad');
+require("./AnonymousLoad");
 // 页面加载模块
-require('./Pageloaad');
+require("./Pageloaad");

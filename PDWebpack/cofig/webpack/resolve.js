@@ -3,5 +3,5 @@
  * @return {{extensions:string[]}}
  */
 module.exports = (confget, conf) => {
-    return {extensions: ['.js', '.jsx']};
+	return {extensions: [".js", ".jsx"]};
 };

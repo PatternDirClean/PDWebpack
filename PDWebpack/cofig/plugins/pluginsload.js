@@ -9,16 +9,16 @@
  * @class WebPackPlugins
  */
 global.WebPackPlugins = {
-    /** HtmlWebpackPlugin 基础基础
-     *
-     * @class HtmlWebpackPlugin
-     * @constructs
-     */
-    HtmlWebpackPlugin: require('./HtmlWebpackPlugin'),
-    /** ScriptExtHtmlWebpackPlugin 基础配置对象
-     *
-     * @class ScriptExtHtmlWebpackPlugin
-     * @constructs
-     */
-    ScriptExtHtmlWebpackPlugin: require('./ScriptExtHtmlWebpackPlugin')
+	/** HtmlWebpackPlugin 基础基础
+	 *
+	 * @class HtmlWebpackPlugin
+	 * @constructs
+	 */
+	HtmlWebpackPlugin: require("./HtmlWebpackPlugin"),
+	/** ScriptExtHtmlWebpackPlugin 基础配置对象
+	 *
+	 * @class ScriptExtHtmlWebpackPlugin
+	 * @constructs
+	 */
+	ScriptExtHtmlWebpackPlugin: require("./ScriptExtHtmlWebpackPlugin")
 };

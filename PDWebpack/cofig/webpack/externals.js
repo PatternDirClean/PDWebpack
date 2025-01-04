@@ -3,5 +3,5 @@
  * @return {Object}
  */
 module.exports = (confget, conf) => {
-    return {};
+	return {};
 };

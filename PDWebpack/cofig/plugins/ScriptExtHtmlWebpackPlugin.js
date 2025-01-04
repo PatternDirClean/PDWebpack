@@ -10,5 +10,5 @@
  * }}
  */
 module.exports = () => {
-    return {sync: [], defer: [], async: []}
+	return {sync: [], defer: [], async: []};
 };
